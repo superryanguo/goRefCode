@@ -1,0 +1,2 @@
+在 Go1.18 的新特性中，strings 和 bytes 增加了一个 Clone 方法
+string的特别之处在于内容不可更改，相比较于slice？！
