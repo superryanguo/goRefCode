@@ -1,0 +1,56 @@
+*  Why did we start working on Go?
+
+Go is an attempt to make programmers more productive. We wanted to improve the software development process at Google, but the problems Google has are not unique to Google.
+
+There were two overarching goals.
+
+The first goal is to make a better language to meet the challenges of scalable concurrency. By scalable concurrency I mean software that deals with many concerns simultaneously, such as coordinating a thousand back end servers by sending network traffic back and forth.
+
+The larger goal is to make a better environment to meet the challenges of scalable software development, software worked on and used by many people, with limited coordination between them, and maintained for years.
+this focus on large-scale development was possibly even better suited to open source than to Google itself
+
+
+ Go’s chosen balance is this: Do Less. Enable More.
+Go can’t do everything. We shouldn’t try. But if we work at it, Go can probably do a few things well.
+First, the size of the Go language itself. We worked hard to put in as few concepts as possible, to avoid the problem of mutually incomprehensible dialects forming in different parts of a large developer community. No idea went into Go until it had been simplified to its essence and then had clear benefits that justified the complexity being added.
+Keeping the language small enables more important goals. Being small makes Go easier to learn, easier to understand, easier to implement, easier to reimplement, easier to debug, easier to adjust, and easier to evolve. Doing less enables more.
+
+Channels and goroutines sit between these two extremes. By themselves, they aren’t a solution to much. But they are powerful enough to be easily arranged to enable solutions to many common problems in concurrent software. Doing less—really doing just enough—enables more.
+
+Go’s testing package is not meant to address every possible facet of these topics. Instead, it is meant to provide the basic concepts necessary for most higher-level tooling. Packages have test cases that pass, fail, or are skipped. Packages have benchmarks that run and can be measured by various metrics.
+
+We designed the language to make gofmt possible, we worked hard to make gofmt’s formatting acceptable for all Go programs, and we made sure gofmt was there from day one of the original public release. Gofmt imposes such uniformity that automated changes blend into the rest of the file.
+#### why open source
+ The business justification is that Go is open source because that’s the only way that Go can succeed. We, the team that built Go within Google, knew this from day one. We knew that Go had to be made available to as many people as possible for it to succeed.
+
+Closed languages die.
+A language needs large, broad communities.
+
+A language needs lots of people writing lots of software, so that when you need a particular tool or library, there’s a good chance it has already been written, by someone who knows the topic better than you, and who spent more time than you have to make it great.
+
+But we also opened our development process: since announcing Go, we’ve done all our development in public, on public mailing lists open to all. We accept and review source code contributions from anyone. The process is the same whether you work for Google or not. We maintain our bug tracker in public, we discuss and develop proposals for changes in public, and we work toward releases in public. The public source tree is the authoritative copy. Changes happen there first. They are only brought into Google’s internal source tree later. For Go, being open source means that this is a collective effort that extends beyond Google, open to all.
+
+
+Any open source project starts with a few people, often just one, but with Go it was three: Robert Griesemer, Rob Pike, and Ken Thompson. They had a vision of what they wanted Go to be, what they thought Go could do better than existing languages, and Robert will talk more about that tomorrow morning. I was the next person to join the team, and then Ian Taylor, and then, one by one, we’ve ended up where we are today, with hundreds of contributors.
+
+
+Google’s primary role is: Do Less. Enable More.
+
+As design and development shift to the broader Go community, one of the most important things we the original authors of Go can offer is consistency of vision, to help keep Go Go. The balance that we must strike is certainly subjective. For example, a mechanism for extensible syntax would be a way to enable more ways to write Go code, but that would run counter to our goal of having a consistent language without different dialects.
+
+We have to say no sometimes, perhaps more than in other language communities, but when we do, we aim to do so constructively and respectfully, to take that as an opportunity to clarify the vision for Go.
+
+
+### Code of Conduct
+I’ve argued that Go must be open, and that Go needs your help.
+
+But in fact Go needs everyone’s help. And everyone isn’t here.
+
+Go needs ideas from as many people as possible.
+
+To make that a reality, the Go community needs to be as inclusive, welcoming, helpful, and respectful as possible.
+
+We have no experience writing a Code of Conduct, so we have been reading existing ones, and we will probably adopt an existing one, perhaps with minor adjustments. The one I like the most is the Django Code of Conduct, which originated with another project called SpeakUp! It is structured as an elaboration of a list of reminders for everyday interaction.
+
+“Be friendly and patient. Be welcoming. Be considerate. Be respectful. Be careful in the words that you choose. When we disagree, try to understand why.”
+

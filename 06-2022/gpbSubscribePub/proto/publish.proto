@@ -1,0 +1,14 @@
+syntax="proto3";
+ 
+package proto;
+message StringPub{
+  string value =1;
+}
+ 
+service PubsubService {
+  // 发布是rpc的普通方法
+  rpc Publish (StringPub) returns (StringPub);
+  // 订阅则是一个单向的流服务，服务端返回的数据可能很大
+  rpc Subscribe (StringPub) returns (stream StringPub);
+}
+//protoc --go_out=plugins=grpc:. publish.proto 生成相应的
