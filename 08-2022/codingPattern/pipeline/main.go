@@ -4,8 +4,7 @@ import "fmt"
 
 //https://blog.golang.org/advanced-go-concurrency-patterns
 
-func main() {
-	fmt.Println("vim-go")
+func httpmain() {
 http.HandleFunc("/v1/hello", WithServerHeader(WithAuthCookie(hello)))
 http.HandleFunc("/v2/hello", WithServerHeader(WithBasicAuth(hello)))
 http.HandleFunc("/v3/hello", WithServerHeader(WithBasicAuth(WithDebugLog(hello))))
@@ -20,6 +19,7 @@ func makeRange(min, max int) []int {
 }
 
 func main() {
+	fmt.Println("vim-go")
   nums := makeRange(1, 10000)
   in := echo(nums)
 
