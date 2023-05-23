@@ -1,0 +1,22 @@
+Error:
+ await import('source-map-support').then((r) => r.default.install())
+ SyntaxError: Unexpected reserved word
+Cause: becuase the node version is too low, not compated with the vue3
+
+- 删除依赖重新下载方法
+
+    rm -rf node_modules  //删除node_modules文件或手动删除
+    rm package-lock.json //删除package-lock.json文件或手动删除
+    npm cache clean --force
+    npm install
+
+
+
+- Linux系统上更新Node.js, might need sudo
+
+    npm cache clean -f // 清除npm缓存
+    npm install -g n // 安装n, Node的版本管理器,全局安装node
+    n stable // 安装了n模块后，使用它来安装最新的稳定版本
+
+    // 如果你想安装最新版本
+    n latest
