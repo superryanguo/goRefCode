@@ -89,7 +89,7 @@ func main() {
 			Method: "tools/call",
 		},
 	}
-	toolRequest.Params.Name = "calculate"
+	toolRequest.Params.Name = "add"
 	toolRequest.Params.Arguments = map[string]any{
 		"operation": "add",
 		"x":         1,
